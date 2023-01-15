@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300&display=swap"
+        rel="stylesheet">
+    <title>Chemex ☕</title>
+    <style>
+        body {
+            /*background-image: url("");
+        background-size: cover;*/
+            background: linear-gradient(87.4deg, rgb(255, 241, 165) 1.9%, rgb(200, 125, 76) 49.7%, rgb(83, 54, 54) 100.5%);
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            font-family: 'Source Code Pro', monospace;
+            font-weight: 700;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 1.5;
+            text-align: justify;
+            font-family: 'Quicksand', sans-serif;
+            font-family: 'Source Code Pro', monospace;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid rgb(5, 5, 5);
+            font-size: 16px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border-radius: 3px;
+            padding: 10px 15px;
+            transition: all 200ms ease-in-out;
+            background: rgb(86, 36, 13);
+            color: white;
+        }
+
+        button:hover {
+            background: rgb(255, 149, 0);
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: wheat;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 13px;
+            margin-top: 30px;
+        }
+
+        .content {
+            max-width: 650px;
+            margin: 0 auto;
+            margin-top: 20px;
+            background: rgb(222, 150, 61);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .theme {
+            font-size: 12px;
+            background: rgb(86, 36, 13);
+            color: wheat;
+            padding: 5px 8px;
+        }
+
+        .theme:hover {
+            background: rgb(41, 41, 41);
+            color: wheat;
+        }
+
+        .magic {
+            border-radius: 4px;
+            transition: all 200ms ease-in-out;
+        }
+
+        .magic:hover {
+            filter: contrast(80%);
+            transform: scale(1.1);
+        }
+
+        .grid {
+            margin-top: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .grid img {
+            width: 100%;
+            border-radius: 5px;
+            object-fit: cover;
+            aspect-ratio: 1.4;
+            transition: all 200ms ease-in-out;
+        }
+
+        .grid img:hover {
+            transform: scale(1.5);
+        }
+
+        .dark {
+            background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+            color: wheat;
+        }
+
+        .dark .content {
+            background: rgb(83, 82, 82);
+        }
+
+        .dark .theme {
+            background: rgb(41, 41, 41);
+            color: wheat;
+        }
+
+        .dark .new-color {
+            background: rgb(41, 41, 41);
+            color: wheat;
+        }
+
+        .dark .new-color:hover {
+            background: rgb(143, 140, 140);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="theme">Change theme</button>
+    <div class="content">
+        <h1>Chemex</h1>
+        <h2>My favourite coffee brewing method ☕</h2>
+        <a href="https://en.wikipedia.org/wiki/Chemex_Coffeemaker" target="_blank">
+            <video src="chemex.mp4" width=650px controls autoplay class="magic"></a>
+        <div class="grid">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/513/original/What-is-the-Chemex.jpg?1672220487"
+                alt="">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/512/original/chemex-coffee-maker-1200x802.jpg?1672220473"
+                alt="">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/511/original/chemex_%281%29.jpg?1672220464"
+                alt="">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/510/original/Brewing-Coffee-With-Chemex.jpg?1672220458"
+                alt="">
+        </div>
+        <p>What is a Chemex?
+            It was back in 1941 when a German chemist, Peter J. Schlumbohm, invented this brewing device.
+            He combined a laboratory glass funnel and an Erlenmeyer flask - still widely used in laboratories.
+            In this combination, an air funnel was needed to make a space for the air escaping when water was poured in.
+            This funnel is up in the front of the device.
+            Also, to save hands from the heat, he added a wooden belt to the waist of Chemex.</p>
+        <button class="new-color"> <a href="https://www.youtube.com/watch?v=ikt-X5x7yoc" target="_blank">Learn
+                more</a></button>
+    </div>
+    <footer>Coded with ☕&🍪 by WP</footer>
+    <script>
+        function changeTheme() {
+            //body.classList.toggle("dark");
+            let body = document.querySelector("body");
+            if (body.classList.contains("dark")) {
+                body.classList.remove("dark");
+            } else {
+                body.classList.add("dark");
+            }
+        }
+        let theme = document.querySelector(".theme");
+        theme.addEventListener("click", changeTheme);
+    </script>
+</body>
+
+</html>
