@@ -1,6 +1,6 @@
-## Coffe
+## Coffee
 
-HTML/CSS 
+HTML, CSS 
 
 Sources: Wikipedia, Pexels (https://www.pexels.com/pl-pl/), Coverr (https://coverr.co/);
 
